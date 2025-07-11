@@ -2,7 +2,7 @@
 
 # test_etl.sh - Test script for Hello World
 
-output=$(python3 etl.py)
+output=$(python3 ./src/etl.py)
 expected="Hello World"
 
 if [ "$output" = "$expected" ]; then
