@@ -13,11 +13,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name:
-        run: npm tests
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-      - name: List files
-        run: ls -la
+      - name: Make test script executable
+        run: chmod +x test_etl.sh
+
+      - name: Run the test script
+        run: ./test_etl.sh
