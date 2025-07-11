@@ -25,4 +25,4 @@ jobs:
         run: chmod +x test_etl.sh
 
       - name: Run the test script
-        run: ./test_etl.sh
+        run: ./src/test_etl.sh
