@@ -22,7 +22,7 @@ jobs:
           python-version: "3.x"
 
       - name: Make test script executable
-        run: chmod +x /src/test_etl.sh
+        run: chmod +x ./src/test_etl.sh
 
       - name: Run the test script
         run: ./src/test_etl.sh
